@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | UpskillNandu</title>
+    <style>
+     body {
+            background-color : #212121;
+            color : #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="languageList">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    
+
+    // add new element
+    function addListItem(langName)  {   
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.languageList').appendChild(li)
+    }
+    addListItem('python')
+    addListItem('java')
+    addListItem('react')
+
+    // optimized insertion
+    function addOptiListItem() {
+        const li = document.addElement('li')
+        li.appendChild(document.createTextNode(langName))
+
+    }
+
+    // edit element
+    function editListItem() {
+        const secondChild = document.querySelector('li:nth-child(2)')
+        // secondChild.innerHTML = 'Ruby'
+
+        // replace method
+        const newLi = document.createElement('li')
+        newLi.textContent = 'Ruby'
+        
+        secondChild.replaceWith(newLi)
+    }
+    editListItem()
+
+    function anotherEditListItem() {
+
+        const fisrtChild = document.querySelector('li:first-child')
+        fisrtChild.outerHTML = '<li>Pascal</li>' 
+    }
+    anotherEditListItem()
+
+
+    // remove element
+    function removeListItem() {
+        const lastChild = document.querySelector('li:last-child')
+        lastChild.remove()
+    }
+
+    removeListItem()
+</script>
+</html>

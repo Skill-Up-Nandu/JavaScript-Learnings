@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+    <style>
+        .bg-color{
+            background-color : rgb(24, 22, 22);
+            color : #fff
+        }
+    </style>
+</head>
+<body class="bg-color">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+    <div class="parentChild">
+
+    </div>
+</body>
+<script>
+
+    // craete an element 
+    const para = document.createElement('p')
+    const data = document.createTextNode('Hi my name is nandu')
+    para.appendChild(data)
+    document.querySelector('.parentChild').appendChild(para)
+
+</script>
+</html>
